@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Reservas — Resort Ilha do Espanto</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- MENU -->
+<nav class="menu">
+  <a href="index.html">Início</a>
+  <a href="exposicao.html">Exposição</a>
+  <a href="reservas.html">Reservas</a>
+</nav>
+
+<!-- HERO RESERVAS -->
+<header class="reservas-hero">
+  <div class="reservas-hero-overlay">
+    <h1>Faça sua Reserva</h1>
+    <p>
+      Escolha datas, acomodações e prepare-se para viver uma experiência exclusiva.
+    </p>
+  </div>
+</header>
+
+<!-- FORMULÁRIO DE RESERVA -->
+<section class="reserva-box">
+<p id="resultado" class="resultado-busca">
+  Quartos disponíveis para o período selecionado.
+</p>
+
+
+  <div class="reserva-item">
+    <label>Check-in</label>
+    <input type="date">
+  </div>
+
+  <div class="reserva-item">
+    <label>Check-out</label>
+    <input type="date">
+  </div>
+
+  <div class="reserva-item">
+    <label>Adultos</label>
+    <select>
+      <option>1</option>
+      <option selected>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+  <div class="reserva-item">
+    <label>Crianças</label>
+    <select>
+      <option selected>0</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+    </select>
+  </div>
+
+  <div class="reserva-item botao">
+    <button onclick="buscar()">Buscar disponibilidade</button>
+  </div>
+
+</section>
+
+
+<div class="quartos-grid">
+
+  <div class="quarto-card desativado" onclick="selecionarQuarto(this)">
+    <img src="img/quarto_standard.jpg">
+    <h3>Quarto Standard</h3>
+    <p>Conforto e elegância para sua estadia.</p>
+  </div>
+
+  <div class="quarto-card desativado" onclick="selecionarQuarto(this)">
+    <img src="img/quarto_luxo.jpg">
+    <h3>Suíte Luxo</h3>
+    <p>Experiência premium com vista exclusiva.</p>
+  </div>
+
+  <div class="quarto-card desativado" onclick="selecionarQuarto(this)">
+    <img src="img/quarto_master.jpg">
+    <h3>Suíte Luxo</h3>
+    <p>Experiência completa com vista exclusiva.</p>
+  </div>
+
+  <div class="quarto-card desativado">
+    <div class="quarto-thumb vip-thumb"></div>
+    <div class="quarto-info">
+      <h3>Experiência VIP</h3>
+      <p class="vip-text">Vendas encerradas</p>
+    </div>
+
+</div>
+<button id="btnReservar" class="btn-reservar" onclick="confirmarReserva()">
+  Reservar agora
+</button>
+
+<script>
+function buscar() {
+  document.getElementById("resultado").style.display = "block";
+}
+</script>
+
+<script>
+function buscar() {
+  // Ativa quartos
+  document.querySelectorAll('.quarto-card').forEach(card => {
+    card.classList.remove('desativado');
+    card.classList.add('ativo');
+  });
+
+  // Mensagem de busca (se você já fez)
+  const resultado = document.getElementById("resultado");
+  if (resultado) resultado.style.display = "block";
+}
+
+function selecionarQuarto(card) {
+  document.querySelectorAll('.quarto-card').forEach(c => {
+    c.classList.remove('selecionado');
+  });
+
+  card.classList.add('selecionado');
+  document.getElementById('btnReservar').style.display = "block";
+}
+
+function confirmarReserva() {
+  document.getElementById("popupReserva").style.display = "flex";
+}
+
+function fecharPopup() {
+  document.getElementById("popupReserva").style.display = "none";
+}
+</script>
+
+<div id="popupReserva" class="popup">
+  <div class="popup-conteudo">
+    <h2>Reserva Confirmada</h2>
+    <p>Sua reserva foi registrada com sucesso.</p>
+    <button onclick="fecharPopup()">Fechar</button>
+  </div>
+</div>
+
+
+</body>
+</html>
+

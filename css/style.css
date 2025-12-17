@@ -1,0 +1,714 @@
+
+/* ================= VARIÁVEIS DE COR ================= */
+
+:root {
+  --verde-escuro: #0f3d2e;
+  --verde-dourado: #1f6b4e;
+  --vermelho-rosa: #a63d4f;
+  --marfim: #f4f1ec;
+  --texto-escuro: #2b2b2b;
+}
+
+/* ================= RESET BÁSICO ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Georgia", serif;
+}
+
+body {
+  background: var(--marfim);
+  color: var(--texto-escuro);
+}
+
+/* ================= MENU ================= */
+
+.menu {
+  background: var(--verde-escuro);
+  padding: 20px 10%;
+}
+
+.menu a {
+  color: var(--marfim);
+  margin-right: 30px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  color: var(--vermelho-rosa);
+}
+
+/* ================= HERO PRINCIPAL ================= */
+
+.hero {
+  height: 100vh;
+  background-image: url("../img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(15, 61, 46, 0.55);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.btn-hero {
+  background: #d1a84a;
+  color: #000;
+  padding: 14px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+}
+
+.btn-hero:hover {
+  background: #b8933f;
+}
+
+/* ================= HISTÓRIA ================= */
+
+.historia {
+  padding: 100px 10%;
+  background: #ffffff;
+}
+
+.historia-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.historia-texto {
+  flex: 1;
+}
+
+.historia-texto h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.historia-texto p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.historia-imagem {
+  flex: 1;
+}
+
+.historia-imagem img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+/* ================= ACOMODAÇÕES ================= */
+
+.acomodacoes {
+  padding: 100px 10%;
+  background: var(--marfim);
+  text-align: center;
+}
+
+.acomodacoes h2 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.acomodacoes-sub {
+  font-size: 18px;
+  margin-bottom: 60px;
+}
+
+.acomodacoes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.acomodacao-card {
+  background: white;
+  border-top: 5px solid var(--verde-dourado);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.acomodacao-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.acomodacao-card h3 {
+  font-size: 22px;
+  margin: 20px;
+}
+
+.acomodacao-card p {
+  font-size: 16px;
+  margin: 0 20px 30px;
+  line-height: 1.6;
+}
+
+/* ================= ATRAÇÕES ================= */
+
+.atracoes {
+  background: var(--verde-dourado);
+  padding: 140px 0;
+  position: relative;
+  color: white;
+}
+
+.curva-top {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background: var(--marfim);
+  border-bottom-left-radius: 100% 80px;
+  border-bottom-right-radius: 100% 80px;
+}
+
+.curva-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background: var(--marfim);
+  border-top-left-radius: 100% 80px;
+  border-top-right-radius: 100% 80px;
+}
+
+.atracoes-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 0 10%;
+}
+
+.atracoes-texto {
+  flex: 1;
+}
+
+.atracoes-texto h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.atracoes-texto p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.atracoes-carousel {
+  flex: 1.5;
+  position: relative;
+}
+
+.atracoes-carousel img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  font-size: 26px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.carousel-btn.left {
+  left: 10px;
+}
+
+.carousel-btn.right {
+  right: 10px;
+}
+
+/* ================= EXPOSIÇÃO ================= */
+
+.expo-hero {
+  height: 70vh;
+  background-image: url("../img/coracao-rosas.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.expo-hero-overlay {
+  background: linear-gradient(
+    rgba(15,61,46,0.75),
+    rgba(15,61,46,0.4)
+  );
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10%;
+  color: #f2d6d6;
+}
+
+.expo-hero-overlay h1 {
+  font-size: 52px;
+  margin-bottom: 15px;
+}
+
+.expo-intro {
+  padding: 80px 10%;
+  background: white;
+}
+
+.expo-intro h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.expo-artefatos {
+  padding: 100px 10%;
+  background: var(--marfim);
+}
+
+.artefatos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.artefato-card {
+  background: white;
+  border-top: 4px solid var(--vermelho-rosa);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.artefato-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.artefato-card h3 {
+  margin: 20px;
+}
+
+.artefato-card p {
+  margin: 0 20px 30px;
+  line-height: 1.6;
+}
+
+/* ================= VIP ================= */
+
+.expo-vip {
+  padding: 80px 10%;
+  background: white;
+  display: flex;
+  justify-content: center;
+}
+
+.expo-vip-box {
+  border: 2px solid var(--vermelho-rosa);
+  padding: 40px 60px;
+  text-align: center;
+}
+
+.vip-closed {
+  color: var(--vermelho-rosa);
+  font-weight: bold;
+}
+
+/* ================= RESERVAS HERO ================= */
+
+.reservas-hero {
+  height: 60vh;
+  background-image: url("../img/reservas-hero.jpg"); /* imagem de fundo */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.reservas-hero-overlay {
+  background: rgba(15, 61, 46, 0.65);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10%;
+  color: white;
+}
+
+.reservas-hero-overlay h1 {
+  font-size: 50px;
+  margin-bottom: 12px;
+}
+
+.reservas-hero-overlay p {
+  font-size: 18px;
+}
+
+/* ================= FORMULÁRIO RESERVAS ================= */
+
+.reservas-form-section {
+  background: #ffffff;
+  padding: 80px 10%;
+}
+
+.reservas-form-container {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.reservas-form-container h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.reservas-form-container label {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.reservas-form-container input,
+.reservas-form-container select {
+  padding: 10px;
+  border: 1px solid #999;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.btn-reservar {
+  margin-top: 20px;
+  background: var(--verde-dourado);
+  color: #000;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.btn-reservar:hover {
+  background: #145b3e;
+  color: white;
+}
+
+#reservaMessage {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 17px;
+  color: var(--vermelho-rosa);
+  font-weight: bold;
+}
+
+/* ================= QUARTOS ================= */
+
+.quartos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.quarto-card {
+  background: #f4f4f4;
+  border: 2px solid transparent;
+  padding: 20px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.quarto-card h3 {
+  margin-bottom: 6px;
+}
+
+.quarto-card:hover {
+  border-color: var(--verde-dourado);
+}
+
+.quarto-card.ativo {
+  border-color: var(--verde-dourado);
+  background: #e6f2ee;
+}
+
+.quarto-card.vip {
+  background: #ddd;
+  color: #777;
+  cursor: not-allowed;
+}
+
+.quarto-preview {
+  margin-bottom: 30px;
+}
+
+.quarto-preview img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ================= QUARTOS ESTILO RESORT ================= */
+
+.titulo-secao {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.quartos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.quarto-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 3px solid transparent;
+}
+
+.quarto-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.quarto-card.ativo {
+  border-color: var(--verde-dourado);
+}
+
+.quarto-thumb {
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+}
+
+.quarto-info {
+  padding: 18px;
+}
+
+.quarto-info h3 {
+  margin-bottom: 6px;
+}
+
+.quarto-info p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* VIP */
+
+.quarto-card.vip {
+  cursor: not-allowed;
+  filter: grayscale(100%);
+}
+
+.vip-thumb {
+  height: 160px;
+  background: linear-gradient(135deg, #444, #222);
+}
+
+.vip-text {
+  color: #a00;
+  font-weight: bold;
+}
+
+/* PREVIEW */
+
+.quarto-preview {
+  display: flex;
+  justify-content: center;
+}
+
+.preview-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  max-width: 900px;
+  width: 100%;
+}
+
+.preview-card img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+/* ================= RESERVA ESTILO PROFISSIONAL ================= */
+
+.reserva-box {
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 22px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+  margin: 40px 0 60px;
+  align-items: end;
+}
+
+.reserva-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.reserva-item label {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.reserva-item input,
+.reserva-item select {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.reserva-item input:focus,
+.reserva-item select:focus {
+  outline: none;
+  border-color: var(--verde-dourado);
+  box-shadow: 0 0 0 3px rgba(140, 170, 120, 0.25);
+}
+
+.reserva-item.botao button {
+  padding: 15px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg, var(--verde-dourado), var(--verde-escuro));
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.reserva-item.botao button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.resultado-busca {
+  display: none;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: var(--verde-dourado);
+  font-weight: 500;
+}
+
+/* ================= QUARTOS ================= */
+
+.quarto-card {
+  background: white;
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+}
+
+.quarto-card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+/* Desativado */
+.quarto-card.desativado {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* Ativo */
+.quarto-card.ativo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+/* Selecionado */
+.quarto-card.selecionado {
+  outline: 3px solid var(--verde-dourado);
+}
+
+/* Botão reservar */
+.btn-reservar {
+  display: none;
+  margin: 40px auto;
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, var(--verde-dourado), var(--verde-escuro));
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+/* ================= POPUP ================= */
+
+.popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-conteudo {
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.popup-conteudo button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  border-radius: 25px;
+  border: none;
+  background: var(--verde-dourado);
+  color: white;
+  cursor: pointer;
+}

@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Resort Ilha do Espanto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="hero-overlay">
+    <h1>Resort Ilha do Espanto</h1>
+    <p>Exclusividade, conforto e experiências inesquecíveis.</p>
+    <a href="exposicao.html" class="btn-hero">Conhecer a Exposição</a>
+  </div>
+</header>
+
+<!-- ================= MENU ================= -->
+<nav class="menu">
+  <a href="index.html">Início</a>
+  <a href="exposicao.html">Exposição</a>
+  <a href="reservas.html">Reservas</a>
+</nav>
+
+<!-- ================= ATRAÇÕES (ÁREA VERDE) ================= -->
+<section class="atracoes">
+
+  <!-- curva superior -->
+  <div class="curva-top"></div>
+
+  <div class="atracoes-container">
+
+    <div class="atracoes-texto">
+      <h2>Conheça nossas atrações</h2>
+      <p>
+        O resort dispõe de uma seleção de experiências pensadas para todos os perfis de hóspedes. 
+Claro, tudo com uma pitada amedrontadora. Se divirta em nossas festas temáticas, como a Festa da Piscina 
+Sangrenta, Luau do Assombrado e muito mais!
+      </p>
+    </div>
+
+    <div class="atracoes-carousel">
+
+      <button class="carousel-btn left" onclick="prevImage()">&#10094;</button>
+
+      <img id="carouselImage" src="img/atracao1.jpg" alt="Atração do Resort">
+
+      <button class="carousel-btn right" onclick="nextImage()">&#10095;</button>
+
+    </div>
+
+  </div>
+
+  <!-- curva inferior -->
+  <div class="curva-bottom"></div>
+
+</section>
+
+<!-- ================= ACOMODAÇÕES ================= -->
+<section class="acomodacoes">
+  <div class="acomodacoes-container">
+
+    <h2>Nossas Acomodações</h2>
+    <p class="acomodacoes-sub">
+      Conforto, elegância e tranquilidade em cada detalhe.
+    </p>
+
+    <div class="acomodacoes-grid">
+
+      <div class="acomodacao-card">
+        <img src="img/suite2.jpg" alt="Suíte Luxo">
+        <h3>Suíte Luxo</h3>
+        <p>
+          Ambientes amplos, vista privilegiada e acabamento refinado para uma
+          experiência exclusiva.
+        </p>
+      </div>
+
+      <div class="acomodacao-card">
+        <img src="img/suite1.jpg" alt="Suíte Premium">
+        <h3>Suíte Premium</h3>
+        <p>
+          Ideal para quem busca conforto máximo, privacidade e sofisticação.
+        </p>
+      </div>
+
+      <div class="acomodacao-card">
+        <img src="img/suite6.jpg" alt="Suíte Master">
+        <h3>Suíte Master</h3>
+        <p>
+          Nossa acomodação mais exclusiva, com serviços personalizados e vista
+          panorâmica.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= HISTÓRIA ================= -->
+<section class="historia">
+  <div class="historia-container">
+
+    <div class="historia-texto">
+      <h2>Conheça nossa História</h2>
+      <p>
+        Nosso Resort foi fundado e construído pelo pesquisador e multimilionário Silas Moore. 
+Silas sempre foi apaixonado por terror e relíquias históricas, então por que não abrir esse seu interesse 
+para o público, mostrar coisas fascinantes que o mundo esconde. Por isso teve a brilhante ideia de fundar o 
+Resort, trazendo conhecimento e diversão para os amantes de conto de terror.
+      </p>
+      <p>
+        Cercado por paisagens naturais preservadas, o resort convida seus hóspedes
+        a se desconectarem do cotidiano e viverem momentos únicos.
+      </p>
+    </div>
+
+    <div class="historia-imagem">
+      <!-- TROQUE A IMAGEM AQUI -->
+      <img src="img/historia.png" alt="História do Resort">
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= SCRIPT DO CARROSSEL ================= -->
+<script src="js/carousel.js"></script>
+
+</body>
+</html>
